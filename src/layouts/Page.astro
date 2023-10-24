@@ -1,0 +1,29 @@
+---
+import BlogList from "../components/blog/list";
+import BlogPagination from "../components/blog/pagination";
+import Layout, { type SEOProps } from "../layouts/Layout.astro";
+import { getCollection, getEntry } from 'astro:content';
+
+type Props = {
+  frontmatter: {
+    title: string;
+    page_size: number;
+    seo?: SEOProps;
+  };
+};
+
+const { frontmatter } = Astro.props
+const { slug } = Astro.params
+let pageSlug = slug;
+if (pageSlug === undefined) {
+  pageSlug = "index"
+};
+const page = await getEntry("pages", pageSlug);
+let posts = await getCollection('blog');
+posts = posts.slice(0, frontmatter.page_size);
+---
+
+<Layout {...frontmatter}>
+  <slot />
+  <BlogList posts={posts} page={page}/>
+</Layout>
