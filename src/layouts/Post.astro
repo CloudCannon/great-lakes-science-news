@@ -32,7 +32,7 @@ const authorDomain = 'https://simple-onion.cloudvent.net/profiles/';
 const authorSlug = author.toLowerCase().replace(/ /g, '-');
 const authorUrl = [authorDomain, authorSlug, '/'].join('');
 
-const posts = await getCollection('science');
+const posts = await getCollection('news');
 ---
 
 <Layout {...props}>
@@ -41,7 +41,7 @@ const posts = await getCollection('science');
       <div>
         <a
           class="inline-flex items-center py-5 hover:text-[#034AD8]"
-          href="/science/"
+          href="/news/"
         >
           <i class="ph-arrow-left mr-2 text-xl"></i>
           <span class="hover:underline hover:underline-offset-4">Back</span>

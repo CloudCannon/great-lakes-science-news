@@ -1,6 +1,6 @@
 ---
 _schema: paginated_collection
-title: Blog
+title: News
 description: 'We believe that a good email marketing strategy is the key to growth. So we’re helping you grow your business with tools and resources that make email marketing easy.'
 page_size: 6
 seo:

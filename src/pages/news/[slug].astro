@@ -3,14 +3,14 @@ import PostLayout from '../../layouts/Post.astro';
 import { getCollection, getEntryBySlug } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('science');
+  const posts = await getCollection('news');
   return posts.map((post) => ({ params: { slug: post.slug } }));
 }
 
 if (!Astro.params.slug) {
   throw new Error('Post slug is undefined');
 }
-const post = await getEntryBySlug('science', Astro.params.slug);
+const post = await getEntryBySlug('news', Astro.params.slug);
 if (!post) {
   throw new Error('Failed to get post with slug: ' + Astro.params.slug);
 }

@@ -17,7 +17,7 @@ export default function BlogPagination({ pagination }) {
           className={`page-link btn btn-secondary ${
             i === currentPage ? 'active' : ''
           }`}
-          href={i === 1 ? '/science' : `/science/${i}`}
+          href={i === 1 ? '/news' : `/news/${i}`}
         >
           {i}
         </a>

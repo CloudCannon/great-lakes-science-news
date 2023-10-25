@@ -6,8 +6,8 @@ import { getCollection, getEntryBySlug } from 'astro:content';
 
 export async function getStaticPaths({ paginate }: { paginate: Function }) {
   const tags: Record<string, any> = {};
-  const page = await getEntryBySlug('pages', 'science');
-  const posts = await getCollection('science');
+  const page = await getEntryBySlug('pages', 'news');
+  const posts = await getCollection('news');
   posts.forEach(({ data }) =>
     data.tags.forEach((tag: string) => (tags[tag] = true))
   );
@@ -22,7 +22,7 @@ export async function getStaticPaths({ paginate }: { paginate: Function }) {
 }
 
 const tag = Astro.params.tag ?? '';
-const page = (await getEntryBySlug('pages', 'science')).data;
+const page = (await getEntryBySlug('pages', 'news')).data;
 page.title = tag[0].toUpperCase() + tag.slice(1);
 page.description = '';
 
