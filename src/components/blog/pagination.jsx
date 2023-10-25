@@ -15,9 +15,9 @@ export default function BlogPagination({ pagination }) {
       <li className="page-item" key={i}>
         <a
           className={`page-link btn btn-secondary ${
-            i === currentPage ? "active" : ""
+            i === currentPage ? 'active' : ''
           }`}
-          href={i === 1 ? "/blog" : `/blog/${i}`}
+          href={i === 1 ? '/science' : `/science/${i}`}
         >
           {i}
         </a>
@@ -37,7 +37,7 @@ export default function BlogPagination({ pagination }) {
                   width="20.657"
                   height="11.314"
                   viewBox="0 0 20.657 11.314"
-                  style={{ transform: "scale(-1, 1)" }}
+                  style={{ transform: 'scale(-1, 1)' }}
                 >
                   <g data-name="Group 12">
                     <path d="M0 4.657h18v2H0z" data-name="Rectangle 2400" />

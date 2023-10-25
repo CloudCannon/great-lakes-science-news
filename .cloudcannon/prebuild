@@ -1,10 +1,10 @@
 #!/bin/bash
 
-set -e
+# set -e
 
 # Clone the lake
-rm -rf great-lakes-data
-git clone https://github.com/CloudCannon/great-lakes-data.git
+# rm -rf great-lakes-data
+# git clone https://github.com/CloudCannon/great-lakes-data.git
 
 # Move images from lake to site
 # rm -rf public/images
@@ -13,10 +13,10 @@ git clone https://github.com/CloudCannon/great-lakes-data.git
 # Format the files we need
 # node great-lakes-data/format-collection.cjs blog
 
-node great-lakes-data/format-data-file.cjs profiles
+# node great-lakes-data/format-data-file.cjs profiles
 
 # Remove the cloned lake
-rm -rf great-lakes-data
+# rm -rf great-lakes-data
 
 # Update color variables to match variables data file
 npm run prebuild:fetch-theme-color

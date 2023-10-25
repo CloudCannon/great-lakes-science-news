@@ -1,13 +1,13 @@
 ---
-import BlogList from "../../../components/blog/list";
-import BlogPagination from "../../../components/blog/pagination";
-import Layout from "../../../layouts/Layout.astro";
-import { getCollection, getEntryBySlug } from "astro:content";
+import BlogList from '../../../components/blog/list';
+import BlogPagination from '../../../components/blog/pagination';
+import Layout from '../../../layouts/Layout.astro';
+import { getCollection, getEntryBySlug } from 'astro:content';
 
 export async function getStaticPaths({ paginate }: { paginate: Function }) {
   const tags: Record<string, any> = {};
-  const page = await getEntryBySlug("pages", "blog");
-  const posts = await getCollection("blog");
+  const page = await getEntryBySlug('pages', 'science');
+  const posts = await getCollection('science');
   posts.forEach(({ data }) =>
     data.tags.forEach((tag: string) => (tags[tag] = true))
   );
@@ -21,10 +21,10 @@ export async function getStaticPaths({ paginate }: { paginate: Function }) {
   });
 }
 
-const tag = Astro.params.tag ?? "";
-const page = (await getEntryBySlug("pages", "blog")).data;
+const tag = Astro.params.tag ?? '';
+const page = (await getEntryBySlug('pages', 'science')).data;
 page.title = tag[0].toUpperCase() + tag.slice(1);
-page.description = "";
+page.description = '';
 
 const pagination = Astro.props.page;
 const filteredPosts = pagination.data;

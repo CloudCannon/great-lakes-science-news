@@ -1,8 +1,8 @@
 import site from '../../data/site.json';
-import { getCollection } from "astro:content";
+import { getCollection } from 'astro:content';
 
 import rss from '@astrojs/rss';
-const posts = await getCollection('blog');
+const posts = await getCollection('science');
 
 export async function GET() {
   return rss({
@@ -10,7 +10,7 @@ export async function GET() {
     description: site.description,
     site: 'https://muggy-fish.cloudvent.net',
     items: posts.map((post) => ({
-      link: `/blog/${post.slug}`,
+      link: `/science/${post.slug}`,
       title: post.data.title,
       pubDate: post.data.date,
     })),

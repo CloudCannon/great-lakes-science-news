@@ -8,9 +8,9 @@ collections_config:
     disable_add: true
     disable_add_folder: true
   news:
-    path: src/content/blog
+    path: src/content/science
     output: true
-    url: '/blog/[slug]/'
+    url: '/science/[slug]/'
     _enabled_editors:
       - content
       - visual
