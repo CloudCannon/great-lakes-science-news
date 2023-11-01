@@ -31,10 +31,20 @@ collections_config:
         empty_type: string
       author:
         empty_type: string
+        type: select
+        options:
+          values: collections.profiles
+          value_key: path
+          preview:
+            text:
+              - key: path
       tags:
         type: multiselect
         allow_create: true
         empty_type: array
+  profiles:
+    path: src/content/profiles
+    output: true
   pages:
     path: src/content/pages
     url: '/[slug]/'

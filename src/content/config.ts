@@ -44,6 +44,24 @@ const paginatedCollectionSchema = z.object({
   seo: seoSchema,
 });
 
+const profilesCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    content: z.string().optional(),
+    data: z
+      .object({
+        title: z.string(),
+        name: z.string(),
+        designation: z.string(),
+        image: z.string(),
+        image_alt: z.string(),
+        location: z.string(),
+        seo: seoSchema,
+      })
+      .optional(),
+  }),
+});
+
 const pagesCollection = defineCollection({
   schema: z.union([paginatedCollectionSchema, pageSchema]),
 });
@@ -51,4 +69,5 @@ const pagesCollection = defineCollection({
 export const collections = {
   news: newsCollection,
   pages: pagesCollection,
+  profiles: profilesCollection,
 };
