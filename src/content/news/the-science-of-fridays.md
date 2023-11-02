@@ -6,7 +6,7 @@ tags:
   - news
   - friday
   - science
-author: src/content/profiles/test-richardson.json
+author: 'Test Richardson'
 thumb_image_path: /images/blog/blog-thumb-2.jpg
 thumb_image_alt: ''
 image: /images/blog/featured-image-5.jpg
