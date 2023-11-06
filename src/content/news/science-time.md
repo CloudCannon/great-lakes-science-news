@@ -4,7 +4,7 @@ date: 2023-11-06T21:26:45Z
 title: Science time
 tags:
   - science
-author: src/content/profiles/test-richardson.json
+author: 'Test Richardson'
 thumb_image_path: /images/blog/blog-thumb-1.jpg
 thumb_image_alt: ''
 image: /images/blog/featured-image.jpg
