@@ -34,10 +34,10 @@ collections_config:
         type: select
         options:
           values: collections.profiles
-          value_key: path
+          value_key: title
           preview:
             text:
-              - key: path
+              - key: title
       tags:
         type: multiselect
         allow_create: true

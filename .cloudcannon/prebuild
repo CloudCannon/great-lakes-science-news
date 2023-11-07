@@ -1,4 +1,5 @@
 #!/bin/bash
 
 rm -rf src/content/profiles/aggregate
+rm -rf src/content/profiles/all
 npm run prebuild:fetch-theme-color
